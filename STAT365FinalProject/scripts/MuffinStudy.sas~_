@@ -1,0 +1,59 @@
+options validvarname = ANY;
+ods graphics on;
+FILENAME REFFILE '/home/u62123586/STAT-365 Final Project/Muffin Study data.xlsx';
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=XLSX
+	OUT=WORK.IMPORT;
+	GETNAMES=YES;
+RUN;
+proc contents data=WORk.IMPORT;
+
+
+*new dataset, renaming vars;
+data muffins;
+	set WORK.IMPORT(rename = ("Height (mm)"n = height MuffType = type Rack = rack Trial = trial));
+	drop trial;
+run;
+
+*sorting by rack;
+proc sort data=muffins;
+	by rack type;
+run;
+
+
+*ttest with rack and type;
+proc ttest data=muffins;
+	var height;
+	class rack;
+run;
+
+proc ttest data=muffins;
+	var height;
+	class type;
+run;
+
+proc contents data=muffins; run;
+
+proc glimmix data = muffins;
+class rack type;
+model height = rack type rack*type;
+lsmeans rack*type / CL plot = meanplot(sliceby = type CL join);
+run;
+
+
+
+/* Create the interaction plot */
+ods listing gpath = '/home/u62123586/STAT-365 Final Project';
+proc sgplot data=muffins;
+  series x=rack y=height / group=type lineattrs=(pattern=solid);
+  styleattrs datacontrastcolors = (Blue BROWN);
+  xaxis label="Rack";
+  yaxis label="Height (mm)";
+run;
+
+ods graphics / reset;
+ods listing close;
+
+
+
+
