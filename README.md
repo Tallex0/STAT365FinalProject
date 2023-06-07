@@ -13,6 +13,7 @@ In this zip folder, you will find:
 
 
 -documents folder: storing written documents for the project
+
 -----Change Log.pdf is the log of changes made to the final report from the first draft
 
 -----Randomizer and Track Log.pdf is a document containing randomization used for the muffins baked in the study
