@@ -38,9 +38,9 @@ In this zip folder, you will find:
 
 -----Interaction Plot.png is the SAS interaction plot of muffin flavor and location
 
---Muffin Pic.png is the picture of the muffins baked in the study
+-----Muffin Pic.png is the picture of the muffins baked in the study
 
---Muffin Table.png is the table of summary statistics of the muffins
+-----Muffin Table.png is the table of summary statistics of the muffins
 
 
 
