@@ -34,15 +34,15 @@ In this zip folder, you will find:
 
 -results folder: contains results of the study
 
------Figure 1.png is the histogram of muffins by muffin flavor
+-----Figure 1.png is the picture of the muffins baked in the study
 
------Figure 2.png is the histogram of muffins by rack location
+-----Figure 2.png is the histogram of muffins by muffin flavor
 
------Interaction Plot.png is the SAS interaction plot of muffin flavor and location
+-----Figure 3.png is the histogram of muffins by rack location
 
------Muffin Pic.png is the picture of the muffins baked in the study
+-----Figure 4.png is the SAS interaction plot of muffin flavor and location
 
------Muffin Table.png is the table of summary statistics of the muffins
+-----Table 1.png is the table of summary statistics of the muffins
 
 
 
